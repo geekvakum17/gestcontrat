@@ -2712,14 +2712,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #4680ff;
-    border-color: #4680ff;
+    background-color: #048134;
+    border-color: #048134;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #2066ff;
-    border-color: #135dff;
+    background-color: #048134;
+    border-color: #048134;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -30134,7 +30134,7 @@ text.highcharts-drilldown-data-label {
     overflow: hidden;
     min-width: 100%;
     min-height: 100vh;
-    background: #4680ff;
+    background: #048134;
 }
 
 @media (min-width: 1200px) {

@@ -6,7 +6,10 @@ $page = (isset($_GET['page'])&& !empty($_GET['page'])&& is_string($_GET['page'])
 switch($page)
 {
      case'login':
-          
+           include './main/views/components/head.php';
+           include './main/views/body/all/login.php';
+           include './main/views/components/script.php';
+           include './main/views/components/footer.php';
      break;
 
      case'ajout_entreprise':
@@ -78,7 +81,7 @@ switch($page)
     break;
 
     case'user':
-        
+      include './main/controllers/user_controller.php'; 
     break;
 
      
