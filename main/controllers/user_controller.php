@@ -33,7 +33,7 @@ switch($instruction) {
                 }else{
                     // On le redirige vers page d'accueil
                     $_SESSION["login"]=TRUE;
-                    header($url1."?page=admin"); 
+                    header($url1."?page=menu"); 
                 }
             }else{
                // Sinonerror=1rien est retourné alors l'authentification à échouée

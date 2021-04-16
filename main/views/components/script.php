@@ -40,7 +40,7 @@
     function checkCookie() {
         var ticks = getCookie("modelopen");
         if (ticks != "") {
-            ticks++ ;
+            ticks++;
             setCookie("modelopen", ticks, 1);
             if (ticks == "2" || ticks == "1" || ticks == "0") {
                 $('#exampleModalCenter').modal();
@@ -53,3 +53,4 @@
         }
     }
 </script>
+
