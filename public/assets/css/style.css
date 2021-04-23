@@ -2716,6 +2716,18 @@ fieldset:disabled a.btn {
     border-color: #048134;
 }
 
+.btn-primary1 {
+    color: #fff;
+    background-color: #4680ff;
+    border-color: #4680ff;
+}
+
+.btn-primary1:hover {
+    color: #fff;
+    background-color: #4680ff;
+    border-color: #4680ff;
+}
+
 .btn-primary:hover {
     color: #fff;
     background-color: #048134;
@@ -23700,11 +23712,20 @@ pre[class*=language-]:before {
     position: relative;
     display: block;
     padding: 25px;
-    margin-top: 140px;
+    
+
+}
+
+.auth-wrapper1 {
+    
+    margin-right: 400px;
+    min-width: 100%;
+    min-height: 100vh;
+    background: #048134;
 }
 
 .pcoded-main-container {
-    background: #ecf0f5;
+    background: #048134;
     position: relative;
     margin: 0 auto;
     padding-top: 0;
@@ -23713,10 +23734,13 @@ pre[class*=language-]:before {
     float: unset;
     right: 0;
     top: 0;
-    margin-left: 230px;
+    margin-left: 450px;
+    margin-right: 450px;
     min-height: 100vh;
     transition: all 0.3s ease-in-out;
 }
+
+
 
 /* main content end*/
 /* ==========================    Rsponsive Menu  start   ====================== */
@@ -23898,7 +23922,7 @@ pre[class*=language-]:before {
     }
 
     .pcoded-content {
-        padding: 25px 15px;
+        padding: 25px 25px;
     }
 
     .card {

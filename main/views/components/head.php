@@ -37,5 +37,4 @@ if ((isset($_SESSION['error']) && !empty($_SESSION['error']) && $_SESSION['error
 	<link rel="stylesheet" href="<?php echo $url ?>../../public/assets/css/style.css">
 	<link rel="stylesheet" href="<?php echo $url ?>../../public/assets/css/style.css">
 
-
 </head>

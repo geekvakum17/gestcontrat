@@ -12,8 +12,13 @@ switch($page)
            include './main/views/components/footer.php';
      break;
 
-     case'ajout_entreprise':
-           
+     case'register':
+           include './main/views/components/head.php';
+           //include './main/views/components/navbar.php';
+           //include './main/views/components/header.php';
+           include './main/views/body/all/register.php';
+           //include './main/views/components/script.php';
+           include './main/views/components/footer.php';
      break;
 
      case'changidenty':

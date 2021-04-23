@@ -9,6 +9,10 @@
 <script src="<?php echo $url ?>../../public/assets/js/plugins/apexcharts.min.js"></script>
 <!-- custom-chart js -->
 <script src="<?php echo $url ?>../../public/assets/js/pages/dashboard-main.js"></script>
+<!-- jquery-validation Js -->
+<script src="<?php echo $url ?>../../public/assets/js/plugins/jquery.validate.min.js"></script>
+<!-- form-picker-custom Js -->
+<script src="<?php echo $url ?>../../public/assets/js/pages/form-validation.js"></script>
 <script>
     $(document).ready(function() {
         checkCookie();
