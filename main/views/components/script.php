@@ -13,6 +13,16 @@
 <script src="<?php echo $url ?>../../public/assets/js/plugins/jquery.validate.min.js"></script>
 <!-- form-picker-custom Js -->
 <script src="<?php echo $url ?>../../public/assets/js/pages/form-validation.js"></script>
+
+<script src="<?php echo $url ?>../../public/assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="<?php echo $url ?>../../public/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+<script>
+    // DataTable start
+    $('#report-table').DataTable();
+    // DataTable end
+</script>
+
+
 <script>
     $(document).ready(function() {
         checkCookie();

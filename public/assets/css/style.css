@@ -23724,7 +23724,7 @@ pre[class*=language-]:before {
     background: #048134;
 }
 
-.pcoded-main-container {
+.geek-pcoded {
     background: #048134;
     position: relative;
     margin: 0 auto;
@@ -23740,6 +23740,21 @@ pre[class*=language-]:before {
     transition: all 0.3s ease-in-out;
 }
 
+
+.pcoded-main-container {
+    background: #048134;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 0;
+    display: block;
+    clear: both;
+    float: unset;
+    right: 0;
+    top: 0;
+    margin-left:230px
+    min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
 
 
 /* main content end*/

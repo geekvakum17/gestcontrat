@@ -1,7 +1,7 @@
 
 <!-- [ Main Content ] start -->
 <div class="auth-wrapper">
-<section class="pcoded-main-container">
+<section class="geek">
     <div class="pcoded-content">
         <!-- [ Main Content ] start -->
         <div class="row">
