@@ -59,69 +59,199 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="./?page=user" method="POST">
+                <input type="hidden" name="instruction" value="addentreprise"/>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="floating-label" for="Name">Guardian Name</label>
-                                <input type="text" class="form-control" id="Name" placeholder="">
+                                <label class="floating-label" for="Name">RAISON SOCIAL DE L'ENTREPRISE</label>
+                                <input type="text" class="form-control" name="raisonsociale" id="raisonsociale" required placeholder="">
+                                <?php $date = date("Y");
+                                $result = $UserRequest->gestnumber();
+                                $nbre = $result[0]['nbre'];
+                                $code = "ENTRE".$date.($nbre+1); ?>
+                                <input type="hidden" class="form-control" name="codeEts" id="codeEts" value="<?php echo $code ?>"  required readonly="readonly">
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group fill">
-                                <label class="floating-label" for="Email">Email</label>
-                                <input type="email" class="form-control" id="Email" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group fill">
-                                <label class="floating-label" for="Password">Password</label>
-                                <input type="password" class="form-control" id="Password" placeholder="">
-                            </div>
-                        </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="floating-label" for="Rollno">Children roll number</label>
-                                <input type="text" class="form-control" id="Rollno" placeholder="">
+                                <label class="floating-label" for="Name">ACTIVITE PRINCIPALE</label>
+                                <input type="text" class="form-control" name="activiteprincipale"  id="activiteprincipale" required placeholder="">
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label class="floating-label" for="Address">Address</label>
-                                <textarea class="form-control" id="Address" rows="3"></textarea>
-                            </div>
-                        </div>
+
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="floating-label" for="Sex">Select Sex</label>
-                                <select class="form-control" id="Sex">
-                                    <option value=""></option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
+                                <label class="floating-label" for="Sex">BRANCHE D'ACTIVITE</label>
+                                <?php $result = $UserRequest->listbrancheactiv(); ?>
+                                <select class="form-control" name="brancheactivite" id="brancheactivite">
+                                <?php foreach($result as $data):?>
+                                    <option selected="selected" value="<?php echo $data['lib_branche_activ'];?>"><?php echo $data['lib_branche_activ'];?></option>
+                                <?php endforeach?>
                                 </select>
                             </div>
                         </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">NOM ET PRENOM DE LA PERSONNE AGISSANT POUR LE COMPTE DE L'EMPLOYEUR</label><br>
+                                <input type="text" class="form-control" name="nomprenomsemployeur"  id="nomprenomsemployeur" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">QUALITE</label>
+                                <input type="text" class="form-control" name="qualitemployeur"  id="qualitemployeur" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">N° CNPS DE L'EMPLOYEUR</label>
+                                <input type="text" class="form-control" name="numcnps"  id="numcnps" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">N° CC 'EMPLOYEUR</label>
+                                <input type="text" class="form-control" name="compteContribuable"  id="compteContribuable" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Sex">LOCALITE&nbsp;&nbsp;&nbsp;<span  data-toggle="tooltip" data-placement="top" title="lieux d'habitation" >?</span></label>
+                                <?php $result = $UserRequest->listecommune(); ?>
+                                <select class="form-control" name="communeentreprise" id="communeentreprise">
+                                <?php foreach($result as $data):?>
+                                    <option selected="selected" value="<?php echo $data['vil'];?>"><?php echo $data['vil'];?></option>
+                                <?php endforeach?>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Sex">SOUS-PREFECTURE</label>
+                                <?php $result = $UserRequest->listessousprefecture(); ?>
+                                <select class="form-control" name="sousprefectureentreprise" id="sousprefectureentreprise">
+                                <?php foreach($result as $data):?>
+                                    <option selected="selected" value="<?php echo $data['lib_sousprefecture'];?>"><?php echo $data['lib_sousprefecture'];?></option>
+                                <?php endforeach?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">ADRESSE</label>
+                                <input type="text" class="form-control" id="adresse" name="adresse" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">TELEPHONE</label>
+                                <input type="text" class="form-control" id="telephonentreprise" name="telephonentreprise" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">FAX</label>
+                                <input type="text" class="form-control" id="faxentreprise" name="faxentreprise" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">CONTACT DE L'ENTREPRISE</label>
+                                <input type="text" class="form-control" id="contactemployeur" name="contactemployeur" required placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Sex">DIVISION REGIONALE</label>
+                                <?php $result = $UserRequest->listagenceregionale(); ?>
+                                <select class="form-control" name="agenceregionale" id="agenceregionale">
+                                <?php foreach($result as $data):?>
+                                    <option selected="selected" value="<?php echo $data['agence_regionale'];?>"><?php echo $data['agence_regionale'];?></option>
+                                <?php endforeach?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="floating-label" for="Address">LOCALISATION PRECISE DE L'ENTREPRISE</label>
+                                <textarea class="form-control" name="localisation"  id="localisation" required rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Sex">SECTEUR D'ACTIVITE</label>
+                                <?php $result = $UserRequest->listsecteuractiv(); ?>
+                                <select class="form-control" name="secteurbrancheactivite" id="secteurbrancheactivite">
+                                <?php foreach($result as $data):?>
+                                    <option selected="selected" value="<?php echo $data['lib_secteur'];?>"><?php echo $data['lib_secteur'];?></option>
+                                <?php endforeach?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="floating-label" for="Name">DATE D'ENREGISTREMENT</label>
+                                <input type="text" class="form-control" name="dateinscription"  id="dateinscription" readonly="readonly" value="<?php $date=date("Y-m-d"); echo $date ?>" required>
+                                <input type="hidden" name="verif" value="1"/>
+                                <input type="hidden" name="id_type_user" value="1"/>
+                            </div>
+                        </div>
+
                         <div class="col-sm-6">
                             <div class="form-group fill">
-                                <label class="floating-label" for="Icon">Profie Image</label>
-                                <input type="file" class="form-control" id="Icon" placeholder="sdf">
+                                <label class="floating-label" for="Email">ADRESSE EMAIL</label>
+                                <input type="email" class="form-control" name="emailentrep"  id="emailentrep" placeholder="" required>
                             </div>
                         </div>
+
                         <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="floating-label" for="Occupation">Occupation</label>
-                                <input type="text" class="form-control" id="Occupation" placeholder="">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Password">MOT DE PASSE</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="" required>
                             </div>
                         </div>
+
                         <div class="col-sm-6">
-                            <div class="form-group">
-                                <label class="floating-label" for="Age">Age</label>
-                                <input type="text" class="form-control" id="Age" placeholder="">
+                            <div class="form-group fill">
+                                <label class="floating-label" for="Password">CONFIRMER VOTRE MOT DE PASSE</label>
+                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="" required>
                             </div>
-                        </div>
+                        </div><br><br><br><br><br><br><br>
+                        <script>
+                                                
+                           $('[name="password"], [name="password_confirm"]').on('keyup change', function () {
+                            if ($('[name="password"]').val() !== $('[name="password_confirm"]').val()) {
+                                $('#error-message').fadeOut().remove();
+                            $('<span id="error-message">mot de passe non identique.</span>').css('color', 'red').insertAfter($('[name="password_confirm"]'));
+                                $('form').find('button[type="submit"]').attr('disabled', true);
+                        } else {
+                                    $('#error-message').fadeOut();
+                                $('form').find('button[type="submit"]').attr('disabled', false);
+                            }
+                        });
+                        </script>
+
                         <div class="col-sm-12">
-                            <button class="btn btn-primary">Submit</button>
-                            <button class="btn btn-danger">Clear</button>
+                            <button class="btn btn-danger" type="button" class="close" data-dismiss="modal" aria-label="Close" style=" margin-left: 25%">ANNULER</button>
+                        
+                            <button class="btn btn-primary" style=" margin-left: 30%">ENREGISTRER</button>
                         </div>
                     </div>
                 </form>
