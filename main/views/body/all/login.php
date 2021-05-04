@@ -65,7 +65,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">RAISON SOCIAL DE L'ENTREPRISE</label>
-                                <input type="text" class="form-control" name="raisonsociale" id="raisonsociale" required placeholder="">
+                                <input type="text" class="form-control" name="raisonsociale" id="raisonsociale" required placeholder="" maxlength="70">
                                 <?php $date = date("Y");
                                 $result = $UserRequest->gestnumber();
                                 $nbre = $result[0]['nbre'];
@@ -77,7 +77,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">ACTIVITE PRINCIPALE</label>
-                                <input type="text" class="form-control" name="activiteprincipale"  id="activiteprincipale" required placeholder="">
+                                <input type="text" class="form-control" name="activiteprincipale"  id="activiteprincipale" required placeholder="" maxlength="70">
                             </div>
                         </div>
 
@@ -96,28 +96,28 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">NOM ET PRENOM DE LA PERSONNE AGISSANT POUR LE COMPTE DE L'EMPLOYEUR</label><br>
-                                <input type="text" class="form-control" name="nomprenomsemployeur"  id="nomprenomsemployeur" required placeholder="">
+                                <input type="text" class="form-control" name="nomprenomsemployeur"  id="nomprenomsemployeur" required placeholder="" maxlength="70">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">QUALITE</label>
-                                <input type="text" class="form-control" name="qualitemployeur"  id="qualitemployeur" required placeholder="">
+                                <input type="text" class="form-control" name="qualitemployeur"  id="qualitemployeur" required placeholder="" maxlength="30">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">N° CNPS DE L'EMPLOYEUR</label>
-                                <input type="text" class="form-control" name="numcnps"  id="numcnps" required placeholder="">
+                                <input type="text" class="form-control" name="numcnps"  id="numcnps" required placeholder="" maxlength="30">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">N° CC 'EMPLOYEUR</label>
-                                <input type="text" class="form-control" name="compteContribuable"  id="compteContribuable" required placeholder="">
+                                <input type="text" class="form-control" name="compteContribuable"  id="compteContribuable" required placeholder="" maxlength="30">
                             </div>
                         </div>
 
@@ -149,28 +149,28 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">ADRESSE</label>
-                                <input type="text" class="form-control" id="adresse" name="adresse" required placeholder="">
+                                <input type="text" class="form-control" id="adresse" name="adresse" required placeholder="" maxlength="20">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">TELEPHONE</label>
-                                <input type="text" class="form-control" id="telephonentreprise" name="telephonentreprise" required placeholder="">
+                                <input type="text" class="form-control" id="telephonentreprise" name="telephonentreprise" required placeholder="" maxlength="15">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">FAX</label>
-                                <input type="text" class="form-control" id="faxentreprise" name="faxentreprise" required placeholder="">
+                                <input type="text" class="form-control" id="faxentreprise" name="faxentreprise" required placeholder="" maxlength="15">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="floating-label" for="Name">CONTACT DE L'ENTREPRISE</label>
-                                <input type="text" class="form-control" id="contactemployeur" name="contactemployeur" required placeholder="">
+                                <input type="text" class="form-control" id="contactemployeur" name="contactemployeur" required placeholder="" maxlength="20">
                             </div>
                         </div>
 
@@ -189,7 +189,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label class="floating-label" for="Address">LOCALISATION PRECISE DE L'ENTREPRISE</label>
-                                <textarea class="form-control" name="localisation"  id="localisation" required rows="3"></textarea>
+                                <textarea class="form-control" name="localisation"  id="localisation" required rows="2" maxlength="100"></textarea>
                             </div>
                         </div>
 
@@ -217,21 +217,21 @@
                         <div class="col-sm-6">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Email">ADRESSE EMAIL</label>
-                                <input type="email" class="form-control" name="emailentrep"  id="emailentrep" placeholder="" required>
+                                <input type="email" class="form-control" name="emailentrep"  id="emailentrep" placeholder="" required maxlength="50">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Password">MOT DE PASSE</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="" required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="" required maxlength="8">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Password">CONFIRMER VOTRE MOT DE PASSE</label>
-                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="" required>
+                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="" maxlength="8" required>
                             </div>
                         </div><br><br><br><br><br><br><br>
                         <script>
