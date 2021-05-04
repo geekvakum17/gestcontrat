@@ -224,14 +224,14 @@
                         <div class="col-sm-6">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Password">MOT DE PASSE</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="" required maxlength="8">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="" required maxlength="11">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="form-group fill">
                                 <label class="floating-label" for="Password">CONFIRMER VOTRE MOT DE PASSE</label>
-                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="" maxlength="8" required>
+                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="" maxlength="11" required>
                             </div>
                         </div><br><br><br><br><br><br><br>
                         <script>

@@ -72,15 +72,14 @@ switch($instruction) {
             $password  = (isset($_POST["password"]) && !empty($_POST["password"]) && is_string($_POST["password"])) ? htmlspecialchars($_POST["password"]) : "";
             $verif = (isset($_POST["verif"]) && !empty($_POST["verif"]) && is_string($_POST["verif"])) ? htmlspecialchars($_POST["verif"]) : "";
             $id_type_user = (isset($_POST["id_type_user"]) && !empty($_POST["id_type_user"]) && is_string($_POST["id_type_user"])) ? htmlspecialchars($_POST["id_type_user"]) : "";
-            var_dump ($_POST);
-            //$result= $UserRequest->addets($codeEts,$raisonsociale, $dateinscription, $telephonentreprise, $numcnps, $compteContribuable, $adresse, $villentreprise, $communeentreprise, $sousprefectureentreprise, $localisation, $activiteprincipale, $agenceregionale, $faxentreprise, $emailentrep, $nomprenomsemployeur, $qualitemployeur, $contactemployeur, $brancheactivite, $secteurbrancheactivite, $nbrpersetrange);
-            //$result0= $UserRequest->adduser($raisonsociale, $password, $codeEts, $verif, $id_type_user);
-            /*if($result){
+            $result= $UserRequest->addets($codeEts,$raisonsociale, $dateinscription, $telephonentreprise, $numcnps, $compteContribuable, $adresse, $villentreprise, $communeentreprise, $sousprefectureentreprise, $localisation, $activiteprincipale, $agenceregionale, $faxentreprise, $emailentrep, $nomprenomsemployeur, $qualitemployeur, $contactemployeur, $brancheactivite, $secteurbrancheactivite, $nbrpersetrange);
+            $result0= $UserRequest->adduser($raisonsociale, $password, $codeEts, $verif, $id_type_user);
+            if($result){
                  $_SESSION['raisonsociale']=$raisonsociale;
                  var_dump($_SESSION['raisonsociale']);
                 $_SESSION["login"]=TRUE;
-                header($url1."?page=admin");
-               }*/
+                header($url1."?page=menu");
+               }
         break;
 
         case "update":
