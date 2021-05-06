@@ -28,12 +28,11 @@ if ((isset($_SESSION['error']) && !empty($_SESSION['error']) && $_SESSION['error
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="">
-	<meta name="author" content="Phoenixcoded" />
+	<meta name="author" content="" />
 	<!-- Favicon icon -->
 	<link rel="icon" href="<?php echo $url ?>../../public/assets/images/aej.png" type="image/x-icon">
 
 	<!-- vendor css -->
-	<link rel="stylesheet" href="<?php echo $url ?>../../public/assets/css/style.css">
 	<link rel="stylesheet" href="<?php echo $url ?>../../public/assets/css/style.css">
 	<link rel="stylesheet" href="<?php echo $url ?>../../public/assets/css/style.css">
 	<link rel="stylesheet" href="<?php echo $url ?>../../public/assets/css/plugins/dataTables.bootstrap4.min.css">
