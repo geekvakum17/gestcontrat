@@ -30,7 +30,7 @@
 							}
 
 							?><br /><br />
-							<button class="btn btn-block btn-primary mb-4">S'identifier</button>
+							<button class="btn btn-block btn-success mb-4">S'identifier</button>
 							<p class="mb-0 text-muted">Vous n’avez pas de compte? <a href="#" data-toggle="modal" data-target="#modal-report" class="f-w-400">Inscrivez-vous</a></p>
 						</form>
 					</div>

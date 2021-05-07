@@ -5,17 +5,13 @@
                 <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
                 <a href="#!" class="b-brand">
                     <!-- ========   change your logo hear   ============ -->
-                    <img src="<?php echo $url ?>../../public/assets/images/logo.png" alt="" class="logo">
-                    
+                    <img src="<?php echo $url ?>../../public/assets/images/aej.png"  style="width:100px; height:70px;" alt="" class="rounded-Corners">
                 </a>
-                <a href="#!" class="mob-toggler">
-                    <i class="feather icon-more-vertical"></i>
-                </a>
-            </div>
+                
+            </div><br>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
                         <div class="search-bar">
                             <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
                             <button type="button" class="close" aria-label="Close">
