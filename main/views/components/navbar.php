@@ -26,7 +26,7 @@
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">AJOUTS</span></a>
 						<ul class="pcoded-submenu">
-							<li><a href="index.html">Nouveau Contrat</a></li>
+							<li><a href="./?page=newscontrat">Nouveau Contrat</a></li>
 						</ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">

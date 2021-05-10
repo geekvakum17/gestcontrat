@@ -45,8 +45,19 @@ switch($page)
             
        break; //updateinfo
 
-     case'contrat':
-      
+     case'newscontrat':
+      if (isset($_SESSION["login"]) && !empty($_SESSION["login"]) && $_SESSION["login"] == true) {
+        include './main/views/components/head.php';
+        include './main/views/components/navbar.php';
+        include './main/views/components/header.php';
+        include './main/views/body/user/newscontrat.php';
+        include './main/views/components/script.php';
+        include './main/views/components/footer.php';
+      } else {
+        include './main/views/components/head.php';
+        include './main/views/body/all/login.php';
+        include './main/views/components/footer.php';
+      } 
      break;
 
      case'listecontrat':
