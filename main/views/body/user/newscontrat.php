@@ -33,9 +33,10 @@
                     <div class="card-body">
                         <div class="bt-wizard" id="progresswizard">
                             <ul class="nav nav-pills nav-fill mb-3">
-                                <li class="nav-item"><a href="#progress-t-tab1" class="nav-link" data-toggle="tab">Profile</a></li>
-                                <li class="nav-item"><a href="#progress-t-tab2" class="nav-link" data-toggle="tab">Address</a></li>
-                                <li class="nav-item"><a href="#progress-t-tab3" class="nav-link" data-toggle="tab">Final</a></li>
+                                <li class="nav-item"><a href="#progress-t-tab1" class="nav-link" data-toggle="tab">IDENTIFICATION DU TRAVAILLEUR</a></li>
+                                <li class="nav-item"><a href="#progress-t-tab2" class="nav-link" data-toggle="tab">CONTENU DU CONTRAT</a></li>
+                                <li class="nav-item"><a href="#progress-t-tab3" class="nav-link" data-toggle="tab">REMUNERATION</a></li>
+                                <li class="nav-item"><a href="#progress-t-tab4" class="nav-link" data-toggle="tab">DIFFERENTS</a></li>
                             </ul>
                             <div id="bar" class="bt-wizard progress mb-3" style="height:6px">
                                 <div class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"  style="width: 0%;"></div>
@@ -43,28 +44,147 @@
                             <div class="tab-content">
                                 <div class="tab-pane active show" id="progress-t-tab1">
                                     <form>
+                                    
                                         <div class="form-group row">
-                                            <label for="progress-t-name" class="col-sm-1 col-form-label">Name</label>
-                                            <div class="col-sm-6">
-                                                <input type="text" class="form-control" id="progress-t-name" placeholder="Password">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >Non et Prénom <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" name="nomprenoms"  id="nomprenoms" placeholder="Nom et Prénom" required>
                                             </div>
                                         </div>
+
                                         <div class="form-group row">
-                                            <label for="progress-t-email" class="col-sm-1 col-form-label">Email</label>
-                                            <div class="col-sm-6">
-                                                <input type="email" class="form-control" id="progress-t-email" placeholder="Email">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >LIEUX DE NAISSANCE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" name="lieunaissance"  id="lieunaissance" placeholder="Ex: Bondokou" required>
                                             </div>
                                         </div>
+
                                         <div class="form-group row">
-                                            <label for="progress-t-pwd" class="col-sm-1 col-form-label">Password</label>
-                                            <div class="col-sm-6">
-                                                <input type="password" class="form-control" id="progress-t-pwd" placeholder="Password">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >DATE DE NAISSANCE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-3">
+                                                <input type="date" class="form-control" name="datenaissance"  id="datenaissance" placeholder="Ex: 01-01-01" required>
                                             </div>
                                         </div>
-                                    </form>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-sate" class="col-sm-3 col-form-label">SEXE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-3">
+                                                <select class="form-control" id="sexe" name="sexe">
+                                                    <option selected="selected" value="HOMME">HOMME</option>
+                                                    <option value="FEMME">FEMME</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >FILIATION <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" name="nompere" id="nompere" placeholder="NOM DU PERE" required>
+                                                <input type="text" class="form-control" name="nommere" id="nommere" placeholder="NOM DE LA MERE" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >DOMICILE HABITUEL <span style="color:red"; >*</span>&nbsp;&nbsp;<span ; data-toggle="tooltip" data-placement="top" title="lieux de congé" >?</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="domicilehabituel" id="domicilehabituel" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-sate" class="col-sm-3 col-form-label">COMMUNE&nbsp;&nbsp;&nbsp;<span  data-toggle="tooltip" data-placement="top" title="lieux d'habitation" >?</span></label>
+                                            <div class="col-sm-3">
+                                                <select class="form-control" name="communetravailleur" id="communetravailleur">
+                                                <?php $result = $UserRequest->listecommune(); ?>
+                                                <?php foreach($result as $data):?>
+                                                   <option selected="selected" value="<?php echo $data['vil'];?>"><?php echo $data['vil'];?></option>
+                                                <?php endforeach?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-sate" class="col-sm-3 col-form-label">SOUS-PREFECTURE</label>
+                                            <div class="col-sm-3">
+                                                <select class="form-control" name="sousprefecturetravailleur" id="sousprefecturetravailleur">
+                                                <?php $result = $UserRequest->listessousprefecture(); ?>
+                                                  <?php foreach($result as $data):?>
+                                                     <option selected="selected" value="<?php echo $data['lib_sousprefecture'];?>"><?php echo $data['lib_sousprefecture'];?></option>
+                                                  <?php endforeach?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-sate" class="col-sm-3 col-form-label">NATIONALITE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-3">
+                                                <select class="form-control" name="nationalite" id="nationalite">
+                                                <?php $result = $UserRequest->listenationalite(); ?>
+                                                  <?php foreach($result as $data):?>
+                                                    <option selected="selected" value="<?php echo $data['nat'];?>"><?php echo $data['nat'];?></option>
+                                                  <?php endforeach?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >FONCTION <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="fonctiontravailleur" id="fonctiontravailleur" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >BRANCHE PROFESSIONNELLE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="brancheprofessionnelle" id="brancheprofessionnelle" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-sate" class="col-sm-3 col-form-label">NOMBRE D'ENFANT A CHARGE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-3">
+                                                <select class="form-control" id="sexe" name="nombreenfants">
+                                                    <option selected="selected" value=0>AUCUN</option>
+                                                    <option value=1>1</option>
+                                                    <option value=2>2</option>
+                                                    <option value=3>3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >NOM ET PRENOM DE LA PERSONNE A CONTACTER EN CAS DE NECESSITE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="nomprenomspersonneurgence" id="nomprenomspersonneurgence" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >ADRESSE DE LA PERSONNE A CONTACTER EN CAS DE NECESSITE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="adressepersonneurgence" name="adressepersonneurgence" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="progress-t-name" class="col-sm-3 col-form-label" >CONTACT DE LA PERSONNE A CONTACTER EN CAS DE NECESSITE <span style="color:red"; >*</span></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" iid="contactpersonneurgence" name="contactpersonneurgence" required>
+                                            </div>
+                                        </div><br><br><br>
                                 </div>
                                 <div class="tab-pane" id="progress-t-tab2">
-                                    <form>
+                                 
                                         <div class="form-group row">
                                             <label for="progress-t-sate" class="col-sm-3 col-form-label">State</label>
                                             <div class="col-sm-9">
@@ -103,21 +223,6 @@
                                     <div class="col-sm-6 text-md-right">
                                         <a href="#!" class="btn btn-primary button-next">Next</a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2">
-                <h5 class="mb-3 mt-4"></h5>
-                <div class="bt-wizard" id="verticalwizard">
-                    <div class="row align-items-stratched mb-4">
-                        <div class="col">
-                            <div class="tab-content card mb-0" id="v-pills-tabContent">
-                                <div class="tab-pane card-body active show" id="v-tabs-t-tab1">
-                                    
                                 </div>
                             </div>
                         </div>
