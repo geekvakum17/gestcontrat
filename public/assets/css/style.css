@@ -23726,7 +23726,7 @@ pre[class*=language-]:before {
     right: 0;
     top: 0;
     margin-left: 230px;
-    min-height: 100vh;
+    min-height: 80.5vh;
     transition: all 0.3s ease-in-out;
 }
 

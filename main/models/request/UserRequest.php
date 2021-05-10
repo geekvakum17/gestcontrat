@@ -16,11 +16,11 @@ class UserRequest {
         // Prepare and execute query
         $query = $this->databaseConnection->prepare($querySQl);
         $query->execute();
-        var_dump($query);
-        var_dump( $querySQl);
+        //var_dump($query);
+        //var_dump( $querySQl);
         // Fetching direct query result
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
-        var_dump( $result);
+        //var_dump( $result);
         // Close database connexion
         unset($this->databaseConnection); 
         $this->databaseConnection = null;
@@ -194,7 +194,7 @@ public function addets($codeEts,$raisonsociale, $dateinscription, $telephonentre
   public function adduser($raisonsociale, $password, $codeEts, $verif, $id_type_user){
 
     $req=$this->databaseConnection->prepare('INSERT visas_user (raisonsociale, password, codeEts, verif, id_type_user) VALUES(:raisonsociale, :password, :codeEts, :verif, :id_type_user)');
-    var_dump($req);
+    //var_dump($req);
     //liason de chaque marqueur à une valeur
      $req->bindValue(':raisonsociale', $raisonsociale, PDO::PARAM_STR);
      $req->bindValue(':password', $password, PDO::PARAM_STR);

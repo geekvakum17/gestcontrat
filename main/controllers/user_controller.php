@@ -9,7 +9,7 @@ switch($instruction) {
         $raisonsociale = (isset($_POST["raisonsociale"]) && !empty($_POST["raisonsociale"]) && is_string($_POST["raisonsociale"])) ? $_POST["raisonsociale"] : "";
         $password = (isset($_POST["password"]) && !empty($_POST["password"]) && is_string($_POST["password"])) ? $_POST["password"] : "";
         // On récupère les infos correspondant aux données du formulaire de connexion dans la base de données
-        var_dump($_POST);
+        //var_dump($_POST);
         $User_profile = $UserRequest->authenticate_user($raisonsociale, $password);
         //var_dump($User_profile);
         // Si les informations de l'utilisateur sont retournées alors l'authentication est reussie

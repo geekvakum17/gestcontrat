@@ -94,7 +94,7 @@ switch($page)
 
      
     case'out':
-     
+        include './main/controllers/user_deconexion.php';
     break;
 
     default:

@@ -1,6 +1,6 @@
 <?php
-if (isset($_SESSION["nom"]) && !empty($_SESSION["nom"])) {
-	$User_pseudo = $_SESSION["nom"];
+if (isset($_SESSION['raisonsociale']) && !empty($_SESSION['raisonsociale'])) {
+	$User_pseudo = $_SESSION['raisonsociale'];
 }
 
 if (isset($_SESSION['code_ent']) && !empty($_SESSION['code_ent'])) {
